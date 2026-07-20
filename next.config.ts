@@ -5,14 +5,18 @@ const nextConfig: NextConfig = {
   // dns/net/tls modules directly, instead of a bundled copy with its own dns
   // state (which caused dns.setServers() in lib/mongodb.ts to have no effect).
   serverExternalPackages: ['mongoose'],
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com'
-      }
-    ]
-  },
+ images: {
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "res.cloudinary.com",
+    },
+    {
+      protocol: "https",
+      hostname: "example.com",
+    },
+  ],
+},
   /* config options here */
 };
 
